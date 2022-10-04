@@ -12,7 +12,7 @@ import java.util.NoSuchElementException;
 @ControllerAdvice
 public class MyControllerAdvice extends ResponseEntityExceptionHandler {
     @ExceptionHandler(NoSuchElementException.class)
-    public ResponseEntity<String> mismatchedHttpMethod(){
+    public ResponseEntity<String> authorNotFoundException(){
         return new ResponseEntity<>("Please try with different Author Id - The author for this id is not available ", HttpStatus.NOT_FOUND);
     }
 }
