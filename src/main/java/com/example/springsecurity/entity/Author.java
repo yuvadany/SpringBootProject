@@ -1,6 +1,7 @@
 package com.example.springsecurity.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.*;
 
@@ -8,10 +9,11 @@ import javax.persistence.*;
 @Table(name="authors")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Author {
-
+    @ApiModelProperty(notes = "The Author Id")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int  id;
+    @ApiModelProperty(notes = "The Author Name")
     @Column(name="author_name")
     String name;
 
