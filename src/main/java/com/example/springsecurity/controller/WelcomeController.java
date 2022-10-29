@@ -18,6 +18,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -62,6 +63,8 @@ public class WelcomeController {
     })
     @GetMapping("/getAllAuthors")
     public ResponseEntity<List<Author>> getAllAuthors() {
+        //List<String> testArrayList = new ArrayList<>();
+        //testArrayList.
         return new ResponseEntity<>(authorServices.findAll(), HttpStatus.OK);
     }
 
