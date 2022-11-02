@@ -5,6 +5,8 @@ import com.example.springsecurity.model.Person;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class forEachSample {
     //In Java, the Collection interface has Iterable as its super interface.
@@ -31,6 +33,19 @@ public class forEachSample {
 
         System.out.println("Persons with Age above 1 ");
         personsList.forEach(System.out::println);
+
+
+        String[] arr = new String[]{"kumar", "praveen", "tamil"};
+        List<String> arrayStream = Arrays.asList(arr);
+        arrayStream.forEach(System.out::println);
+
+
+        String[] arr2 = new String[]{"a", "b", "c"};
+        Stream<String> streamOfArrayFull = Arrays.stream(arr2);
+        //streamOfArrayFull.forEach(System.out::println);
+        //System.out.println(streamOfArrayFull.count());
+        var modifiedStream = streamOfArrayFull.map(data->data+" asdf").collect(Collectors.toList());
+        modifiedStream.forEach(System.out::println);
     }
 
     // persons.add("Larry);
