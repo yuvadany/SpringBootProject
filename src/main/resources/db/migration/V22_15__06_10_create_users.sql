@@ -1,0 +1,1 @@
+INSERT INTO `springdb`.`users` (`id`, `email`,`password`) VALUES ('1', 'admin','$2a$10$tr6o8DA17OoVwTNHWcyMnuvAqSulBk8is2ECuthB6Hl/j0PT9UQUu');

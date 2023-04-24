@@ -1,5 +1,6 @@
 package com.example.springsecurity.config;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +18,7 @@ import static com.google.common.base.Predicates.or;
 
 @Configuration
 @EnableSwagger2
+//@ConditionalOnProperty("{swagger.enabled}")
 public class SwaggerConfig {
 
     @Bean
