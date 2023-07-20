@@ -18,7 +18,7 @@ import static com.google.common.base.Predicates.or;
 
 @Configuration
 @EnableSwagger2
-//@ConditionalOnProperty("{swagger.enabled}")
+@ConditionalOnProperty(name="swagger.enabled", havingValue = "true", matchIfMissing = false)
 public class SwaggerConfig {
 
     @Bean
